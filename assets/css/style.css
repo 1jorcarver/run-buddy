@@ -306,36 +306,32 @@ section {
 .service-grid-item {
     padding: 15px 0;
     border: 2px solid #024e76;
-    display; flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.box1 {
-    
+/* specific match */
+.service-grid-item.basic {
+    grid-column: 2 / span 1;
 }
 
-.box2 {
-    
+.service-grid-item.both {
+    grid-column: 2 / span 2;
 }
 
-.box3 {
-    
+.service-grid-item.cancel {
+    writing-mode: vertical-lr;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    transform: rotate(180deg);
 }
 
-.box4 {
-    
+.grid-head, .grid-price, .service-grid-item.cancel {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-
-.box5 {
-    
-}
-
-.box6 {
-    
-}
-
 /* SERVICE PLANS STYLES END */
 
 /* REACH OUT STYLES START */
@@ -481,6 +477,25 @@ section {
         flex: 100%;
     }
 
+    .service-grid-container {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    .service-grid-item.basic {
+        grid-column: 1;
+    }
+    
+    .service-grid-item.both {
+        grid-column: 1 / -1;
+    }
+    
+    .service-grid-item.cancel {
+        transform: none;
+        writing-mode: unset;
+        grid-column: 1 / -1;
+        grid-row: -1;
+    }
+    
 }
 
 /* MEDIA QUERY FOR MOBILE AND SMALLER */
