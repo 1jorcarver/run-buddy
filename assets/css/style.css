@@ -167,7 +167,7 @@ section {
     background-color: var(--tertiary-color); 
   }
 
-.checkbox-wrapper input, .radio-wrapper input {
+.checkbox-wrapper input[type="checkbox"], .radio-wrapper input[type="radio"] {
     opacity: 0;
 }
 
@@ -198,7 +198,7 @@ section {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-image: radial-gradient(circle, var(--tertiary-color, var(--secondary-color)));
+    background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
     position: absolute;
     left: -29px;
     top: -3px;
@@ -217,13 +217,13 @@ section {
     transform: rotate(-58deg);
 }
 
-.checkbox-wrapper input + label::after, 
-.radio-wrapper input + label::after {
+.checkbox-wrapper input[type="checkbox"] + label::after, 
+.radio-wrapper input[type="radio"] + label::after {
     content: none;
 }
 
-.checkbox-wrapper input:checked + label, 
-.radio-wrapper input:checked + label {
+.checkbox-wrapper input[type="checkbox"]:checked + label::after, 
+.radio-wrapper input[type="radio"]:checked + label::after {
     content: "";
 }
 /* Hero-Form Style End */
