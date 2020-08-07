@@ -164,7 +164,7 @@ section {
 }
 
 .hero-form button:hover {
-    background-color: var(--tertiary-color; ) 
+    background-color: var(--tertiary-color); 
   }
 
 .checkbox-wrapper input, .radio-wrapper input {
@@ -206,10 +206,11 @@ section {
 
 .checkbox-wrapper label::after {
     content: "";
-    width: 6px;
-    height: 14px;
+    width: 14px;
+    height: 6px;
     border-left: 2px solid var(--secondary-color);
     border-bottom: 2px solid var(--secondary-color);
+    border-left: solid black 2px;
     position: absolute;
     left: -26px;
     top: 1px;
